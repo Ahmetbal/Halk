@@ -36,7 +36,21 @@ var app = {
         console.log('Received Device Ready Event');
         console.log('calling setup push');
         app.setupPush();
+
+        var push = PushNotification.init({
+            android: {},
+            browser: {
+              pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+            },
+            ios: {
+          alert: "true",
+          badge: true,
+          sound: 'false'
+            },
+            windows: {}
+      });
     },
+    
     setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
