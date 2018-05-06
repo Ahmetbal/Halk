@@ -20,6 +20,14 @@
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.3" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+
+    <preference name="phonegap-version" value="cli-7.0.1" />
+    <platform name="android">
+        <resource-file src="google-services.json" target="/google-services.json" />
+    </platform>
+
+
+
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
